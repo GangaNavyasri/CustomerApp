@@ -5,6 +5,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Customer {
+	
+
 	@Id
 	private int customerId;
 	private String customerName;
@@ -67,7 +69,11 @@ public class Customer {
 		this.customerPassword = customerPassword;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "Customer [customerId=" + customerId + ", customerName=" + customerName + ", customerAddress="
+				+ customerAddress + ", customerEmail=" + customerEmail + ", customerPassword=" + customerPassword + "]";
+	}
 	
 }
 
